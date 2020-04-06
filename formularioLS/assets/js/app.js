@@ -4,7 +4,6 @@ const list = document.querySelector('#lista-tweets');
 //eventlisteners
 eventlisteners();
 
-
 function eventlisteners() {
     document.querySelector('form').addEventListener('submit', addTweet);
 
@@ -54,8 +53,6 @@ function  addTweetLocalStorage(tweet) {
     tweets.push(tweet);
     //REMBER localstorage just can get strings
     localStorage.setItem('tweets', JSON.stringify(tweets));
-
-    
 }
 
 //verify if there are elements in loclastorage
@@ -84,7 +81,6 @@ function localStorageReady() {
         list.appendChild(li);
         li.appendChild(btnRemove);
     });
-
 }
 
 function removeTweetLocalstorage(value) {
@@ -96,7 +92,6 @@ function removeTweetLocalstorage(value) {
         if (tweet === tweetToRemove) {
             tweets.splice(index, 1);
         }
-
     });
 
     //REMBER localstorage just can get strings
