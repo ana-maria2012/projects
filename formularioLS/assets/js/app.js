@@ -86,7 +86,6 @@ function localStorageReady() {
 function removeTweetLocalstorage(value) {
     let tweetToRemove = value.slice(0, value.length-1);
     let tweets = getTweetLocalstorage();
-    let toRemove;
 
     tweets.forEach((tweet, index) => {
         if (tweet === tweetToRemove) {
